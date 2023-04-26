@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 import (
 	"encoding/binary"

@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 const (
 	// CommandCodeMemoryAreaRead Command code: IO memory area read

@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 import (
 	"fmt"
@@ -26,7 +26,7 @@ func (e IncompatibleMemoryAreaError) Error() string {
 // Driver errors
 
 type BCDBadDigitError struct {
-	v string
+	v   string
 	val uint64
 }
 
@@ -34,7 +34,7 @@ func (e BCDBadDigitError) Error() string {
 	return fmt.Sprintf("Bad digit in BCD decoding: %s = %d", e.v, e.val)
 }
 
-type BCDOverflowError struct {}
+type BCDOverflowError struct{}
 
 func (e BCDOverflowError) Error() string {
 	return "Overflow occurred in BCD decoding"

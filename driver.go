@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 import (
 	"encoding/binary"
@@ -6,9 +6,9 @@ import (
 
 // request A FINS command request
 type request struct {
-	header Header
+	header      Header
 	commandCode uint16
-	data   []byte
+	data        []byte
 }
 
 // response A FINS command response

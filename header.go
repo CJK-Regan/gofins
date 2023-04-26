@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 // Header A FINS frame header
 type Header struct {

@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 import (
 	"bufio"
@@ -44,6 +44,7 @@ func NewClient(localAddr, plcAddr Address) (*Client, error) {
 	go c.listenLoop()
 	return c, nil
 }
+
 // Set byte order
 // Default value: binary.BigEndian
 func (c *Client) SetByteOrder(o binary.ByteOrder) {
@@ -255,7 +256,7 @@ func checkResponse(r *response, e error) error {
 	if e != nil {
 		return e
 	}
-	if r.endCode != EndCodeNormalCompletion {
+	if r.endCode >= EndCodeLocalNodeNotInNetwork {
 		return fmt.Errorf("error reported by destination, end code 0x%x", r.endCode)
 	}
 	return nil

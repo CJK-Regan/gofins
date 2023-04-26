@@ -1,4 +1,4 @@
-package fins
+package gofins
 
 const (
 	// MemoryAreaCIOBit Memory area: CIO area; bit
